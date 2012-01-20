@@ -30,10 +30,9 @@ FLAGS = flags.FLAGS
 
 
 def _translate_certificate_view(certificate, private_key=None):
-    return {
-        'data': certificate,
-        'private_key': private_key,
-    }
+    return {'certificate': {
+            'data': certificate,
+            'private_key': private_key }}
 
 
 class CertificatesController(object):
